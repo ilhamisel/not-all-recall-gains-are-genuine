@@ -1,0 +1,10 @@
+numpy>=1.23
+pandas>=1.5
+scipy>=1.9
+scikit-learn>=1.2
+imbalanced-learn>=0.11
+xgboost>=1.7
+shap>=0.41
+matplotlib>=3.6
+# optional: deep-generative baseline (ccsg.baselines.vae_oversample)
+# torch>=2.0

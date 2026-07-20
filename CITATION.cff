@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated paper."
+title: "Not All Recall Gains Are Genuine: In-Loop Admission Control for Boundary Oversampling under Extreme Class Imbalance"
+authors:
+  - family-names: "Sel"
+    given-names: "İlhami"
+    affiliation: "İnönü University, Department of Computer Engineering"
+    email: "ilhami.sel@inonu.edu.tr"
+version: "1.0.0"
+date-released: "2026-07-20"
+license: MIT

@@ -143,7 +143,8 @@ If you use this code, please cite the paper (see `CITATION.cff`):
              Boundary Oversampling under Extreme Class Imbalance},
   author  = {Sel, {\.I}lhami},
   year    = {2026},
-  note    = {under review}
+  note    = {under review},
+  howpublished = {\url{https://github.com/ilhamisel/not-all-recall-gains-are-genuine}}
 }
 ```
 

@@ -36,7 +36,7 @@ where imbalance is extreme.
 ## Installation
 
 ```bash
-git clone https://github.com/<your-username>/not-all-recall-gains-are-genuine.git
+git clone https://github.com/ilhamisel/not-all-recall-gains-are-genuine.git
 cd not-all-recall-gains-are-genuine
 pip install -r requirements.txt
 ```

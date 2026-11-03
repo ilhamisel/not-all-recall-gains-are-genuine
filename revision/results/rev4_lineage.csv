@@ -1,0 +1,6 @@
+primary,other,n_primary,n_other,d_primary,d_other,uniq_primary,uniq_other,exact_overlap_unique,frac_other_rows_in_primary
+Wine_White,imblearn wine_quality (full),4898,4898,11,11,3961,3961,3961,1.0
+Wine_White,wine_quality_x (extreme suite),4898,4746,11,11,3961,3819,3819,1.0
+Wine_Red,wine_quality_x (extreme suite),1599,4746,11,11,1359,3819,2,0.00042140750105351877
+abalone_19,imblearn abalone (full),4177,4177,10,10,4177,4177,4177,1.0
+abalone_19,abalone_x (extreme suite),4177,3804,10,10,4177,3804,3804,1.0

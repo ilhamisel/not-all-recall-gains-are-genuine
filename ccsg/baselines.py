@@ -6,7 +6,7 @@ Included here:
   boundary sampler); the "CalKDE" internal reference.
 * :func:`geob`    -- the identical boundary sampler with the admission test
   removed (purely geometric boundary samples); the "GeoB" matched control that
-  isolates the effect of in-loop screening.
+  isolates the effect of candidate screening.
 * :func:`smote_ipf`, :func:`mwmote`, :func:`vae_oversample` -- faithful
   implementations of three modern rivals (a generate-then-clean filter, a
   selective oversampler, and a deep generative baseline).
@@ -72,39 +72,44 @@ def geob(X, y, seed=42, depth=(0.25, 0.75)):
 # --------------------------------------------------------------------------- #
 # SMOTE-IPF (Saez et al., 2015): SMOTE + iterative partitioning filter
 # --------------------------------------------------------------------------- #
-def smote_ipf(X, y, seed=42, n_part=6, k_iter=3, p=0.01):
-    """SMOTE followed by an iterative ensemble noise filter that removes
-    synthetic samples misclassified by a majority vote of partition-trained
-    forests. Only synthetic samples may be removed."""
+def smote_ipf(X, y, seed=42, n_part=9, k_iter=3, p=0.01, max_iter=50):
+    """SMOTE-IPF with the published defaults (Saez et al., 2015).
+
+    SMOTE to full balance, then an iterative partitioning filter on the
+    augmented set: ``n_part`` stratified partitions, one pruned C4.5-like tree
+    trained on EACH partition, every tree votes on all samples, a sample is
+    removed if the majority of trees misclassify it, and the loop stops after
+    ``k_iter`` consecutive iterations that remove fewer than ``p`` times the
+    original training-set size. Original and synthetic samples may both be
+    removed; a whole class is never deleted.
+    """
+    from sklearn.tree import DecisionTreeClassifier
     rng = np.random.RandomState(seed)
     sm = SMOTE(k_neighbors=max(1, min(5, _kmin(y) - 1)), random_state=seed)
     Xr, yr = sm.fit_resample(X, y)
     Xr, yr = np.asarray(Xr), np.asarray(yr)
-    synth = np.arange(len(Xr)) >= len(X)
+    n_orig = len(X)
     keep = np.ones(len(Xr), bool)
-    for _ in range(k_iter):
+    calm = 0
+    for _ in range(max_iter):
         idx = np.where(keep)[0]
-        if len(idx) < n_part * 2:
+        Xk, yk = Xr[idx], yr[idx]
+        if pd.Series(yk).value_counts().min() < n_part:
             break
-        votes = np.zeros(len(Xr))
-        counts = np.zeros(len(Xr))
         skf = StratifiedKFold(n_splits=n_part, shuffle=True,
                               random_state=rng.randint(1 << 30))
-        Xk, yk = Xr[idx], yr[idx]
-        try:
-            splits = list(skf.split(Xk, yk))
-        except ValueError:
-            break
-        for tr, _te in splits:
-            clf = RandomForestClassifier(n_estimators=25, random_state=seed,
-                                         n_jobs=-1).fit(Xk[tr], yk[tr])
-            votes += (clf.predict(Xr) == yr).astype(float)
-            counts += 1.0
-        agree = np.divide(votes, np.maximum(counts, 1))
-        drop = synth & keep & (agree < 0.5)
-        changed = drop.sum() / max(len(Xr), 1)
-        keep &= ~drop
-        if changed < p:
+        correct = np.zeros(len(idx))
+        for _, part in skf.split(Xk, yk):
+            tree = DecisionTreeClassifier(criterion="entropy", min_samples_leaf=2,
+                                          ccp_alpha=0.005, random_state=seed)
+            correct += (tree.fit(Xk[part], yk[part]).predict(Xk) == yk)
+        bad = correct < n_part / 2.0
+        for c in np.unique(yk):
+            if bad[yk == c].all():
+                bad[yk == c] = False
+        keep[idx[bad]] = False
+        calm = calm + 1 if bad.sum() < p * n_orig else 0
+        if calm >= k_iter:
             break
     return Xr[keep], yr[keep]
 

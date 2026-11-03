@@ -2,11 +2,13 @@
 
 CC-SG balances each training fold class by class. Half of the synthetic
 budget is drawn from a calibrated component-local Gaussian KDE core; the other
-half is generated as boundary samples that must pass an *in-loop admission
-test* -- a one-vs-rest surrogate must still assign each candidate to the
-minority class, otherwise the candidate is rejected and resampled rather than
-deleted. Any budget left unfilled after a bounded number of rounds is
-completed by counterfactual truncation.
+half is generated as boundary samples that must pass an *admission test* -- a
+one-vs-rest surrogate must still assign each candidate to the minority class,
+otherwise the candidate is rejected and the quota is refilled. Any budget left
+unfilled after a bounded number of rounds is processed by counterfactual
+truncation; in the default strict mode every fallback candidate is re-tested
+and failures are replaced by core samples, so every delivered boundary sample
+passes the admission test (the core samples are not screened).
 
 The public entry point is :class:`CCSG`, which follows the
 ``imbalanced-learn`` convention (``fit_resample``). A functional form,
@@ -76,7 +78,7 @@ def _oversample_class(rng, X, y, c, diff, *, beta, tau, depth_lo, depth_hi,
 
 
 def oversample(X, y, *, beta=0.5, tau=0.5, depth=(0.25, 0.75), shrink=SHRINK,
-               rounds=6, strict=False, seed=42):
+               rounds=6, strict=True, seed=42):
     """Balance ``(X, y)`` with CC-SG and return the augmented ``(X, y)``.
 
     Parameters
@@ -94,8 +96,10 @@ def oversample(X, y, *, beta=0.5, tau=0.5, depth=(0.25, 0.75), shrink=SHRINK,
     rounds : int
         Maximum reject-and-resample rounds before the fallback. Default ``6``.
     strict : bool
-        If ``True``, re-check fallback candidates so that *every* admitted
-        sample passes the surrogate (the fully certified variant).
+        If ``True`` (default, the method of the revised paper), re-test every
+        fallback candidate and replace failures by core samples, so that every
+        delivered boundary sample passes the surrogate. ``False`` reproduces
+        the original implementation, which keeps fallback candidates untested.
     seed : int
         Random seed.
     """
@@ -123,7 +127,7 @@ class CCSG:
     """
 
     def __init__(self, beta=0.5, tau=0.5, depth=(0.25, 0.75), shrink=SHRINK,
-                 rounds=6, strict=False, random_state=42):
+                 rounds=6, strict=True, random_state=42):
         self.beta = beta
         self.tau = tau
         self.depth = depth

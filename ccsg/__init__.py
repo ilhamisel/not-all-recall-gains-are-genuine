@@ -1,8 +1,8 @@
 """CC-SG: consistency-controlled, surrogate-gated Gaussian oversampling.
 
 Reference implementation for the paper
-    "Not All Recall Gains Are Genuine: In-Loop Admission Control for Boundary
-     Oversampling under Extreme Class Imbalance."
+    "Not All Recall Gains Are Equal: Consistency-Gated Boundary Oversampling
+     under Extreme Class Imbalance."
 
 Quick start
 -----------
@@ -14,4 +14,4 @@ from .baselines import calkde, geob, smote_ipf, mwmote, vae_oversample
 
 __all__ = ["CCSG", "oversample", "calkde", "geob", "smote_ipf", "mwmote",
            "vae_oversample"]
-__version__ = "1.0.0"
+__version__ = "1.1.0"

@@ -1,5 +1,11 @@
 # Results
 
+> These tables belong to the **first submission** and use the original
+> implementation (`strict=False`). The SMOTE-IPF rows in them come from an
+> earlier implementation that removed almost nothing and was therefore close to
+> SMOTE. The revised paper uses the strict implementation and the corrected
+> SMOTE-IPF; those results are in [`../revision/results/`](../revision/README.md).
+
 `paper_*.csv` are the exact result tables behind the paper (long format:
 `dataset, method, clf, metric, mean, std`). Re-running the experiment scripts
 regenerates equivalent files (`primary.csv`, `external_*.csv`, …).

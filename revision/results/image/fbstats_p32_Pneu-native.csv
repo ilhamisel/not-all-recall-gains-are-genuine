@@ -1,0 +1,16 @@
+task,rep,fold,cls,n_bnd,n_cert,n_fb,n_viol
+Pneu-native,0,0,0,560,557,3,0
+Pneu-native,0,1,0,560,558,2,0
+Pneu-native,0,2,0,560,552,8,0
+Pneu-native,0,3,0,560,555,5,0
+Pneu-native,0,4,0,560,556,4,0
+Pneu-native,1,0,0,560,553,7,1
+Pneu-native,1,1,0,560,558,2,0
+Pneu-native,1,2,0,560,555,5,0
+Pneu-native,1,3,0,560,556,4,0
+Pneu-native,1,4,0,560,555,5,1
+Pneu-native,2,0,0,560,557,3,0
+Pneu-native,2,1,0,560,559,1,0
+Pneu-native,2,2,0,560,557,3,0
+Pneu-native,2,3,0,560,558,2,0
+Pneu-native,2,4,0,560,556,4,0

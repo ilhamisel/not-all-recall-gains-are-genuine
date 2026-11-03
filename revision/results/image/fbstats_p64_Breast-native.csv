@@ -1,0 +1,16 @@
+task,rep,fold,cls,n_bnd,n_cert,n_fb,n_viol
+Breast-native,0,0,0,144,130,14,0
+Breast-native,0,1,0,144,131,13,0
+Breast-native,0,2,0,144,132,12,0
+Breast-native,0,3,0,144,128,16,0
+Breast-native,0,4,0,144,128,16,0
+Breast-native,1,0,0,144,131,13,0
+Breast-native,1,1,0,144,128,16,1
+Breast-native,1,2,0,144,138,6,0
+Breast-native,1,3,0,144,130,14,0
+Breast-native,1,4,0,144,126,18,0
+Breast-native,2,0,0,144,140,4,0
+Breast-native,2,1,0,144,129,15,0
+Breast-native,2,2,0,144,134,10,0
+Breast-native,2,3,0,144,131,13,0
+Breast-native,2,4,0,144,126,18,1

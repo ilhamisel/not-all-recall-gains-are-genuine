@@ -1,0 +1,253 @@
+bin_d5_ir100_low: n=4040 IR=100
+
+======================================================================
+bin_d5_ir100_low  n=4040 d=5 K=2 IR=100.0
+======================================================================
+  [RF ] Base       F1=0.6785 G=0.4603 minRec=0.2917 MCC=0.3847 fail=0
+  [RF ] Sgeo       F1=0.7180 G=0.9707 minRec=0.9667 MCC=0.5242 fail=0
+  [RF ] CC-SG      F1=0.7252 G=0.9586 minRec=0.9417 MCC=0.5301 fail=0
+  [RF ] CC-strict  F1=0.7241 G=0.9584 minRec=0.9417 MCC=0.5286 fail=0
+  [RF ] CC-batch   F1=0.7265 G=0.9543 minRec=0.9333 MCC=0.5305 fail=0
+  [RF ] Oracle-bal F1=0.7205 G=0.9668 minRec=0.9583 MCC=0.5264 fail=0
+  [RF ] Oracle-Bayes F1=0.7259 G=0.9587 minRec=0.9417 MCC=0.5312 fail=0
+bin_d5_ir100_med: n=4040 IR=100
+
+======================================================================
+bin_d5_ir100_med  n=4040 d=5 K=2 IR=100.0
+======================================================================
+  [RF ] Base       F1=0.5399 G=0.1420 minRec=0.0500 MCC=0.1236 fail=0
+  [RF ] Sgeo       F1=0.5623 G=0.7922 minRec=0.6833 MCC=0.2324 fail=0
+  [RF ] CC-SG      F1=0.5707 G=0.7995 minRec=0.6917 MCC=0.2467 fail=0
+  [RF ] CC-strict  F1=0.5629 G=0.7973 minRec=0.6917 MCC=0.2351 fail=0
+  [RF ] CC-batch   F1=0.5666 G=0.7936 minRec=0.6833 MCC=0.2389 fail=0
+  [RF ] Oracle-bal F1=0.5632 G=0.7916 minRec=0.6833 MCC=0.2339 fail=0
+  [RF ] Oracle-Bayes F1=0.5410 G=0.8087 minRec=0.7333 MCC=0.2110 fail=0
+bin_d5_ir100_high: n=4040 IR=100
+
+======================================================================
+bin_d5_ir100_high  n=4040 d=5 K=2 IR=100.0
+======================================================================
+  [RF ] Base       F1=0.4975 G=0.0010 minRec=0.0000 MCC=0.0000 fail=0
+  [RF ] Sgeo       F1=0.4998 G=0.5783 minRec=0.3917 MCC=0.0867 fail=0
+  [RF ] CC-SG      F1=0.5046 G=0.5882 minRec=0.4000 MCC=0.0942 fail=0
+  [RF ] CC-strict  F1=0.4893 G=0.6419 minRec=0.5000 MCC=0.0969 fail=0
+  [RF ] CC-batch   F1=0.4907 G=0.6611 minRec=0.5250 MCC=0.1035 fail=0
+  [RF ] Oracle-bal F1=0.5028 G=0.5846 minRec=0.4000 MCC=0.0922 fail=0
+  [RF ] Oracle-Bayes F1=0.4822 G=0.6864 minRec=0.5833 MCC=0.1061 fail=0
+bin_d5_ir200_low: n=4020 IR=200
+
+======================================================================
+bin_d5_ir200_low  n=4020 d=5 K=2 IR=200.0
+======================================================================
+  [RF ] Base       F1=0.5789 G=0.2006 minRec=0.1000 MCC=0.1996 fail=0
+  [RF ] Sgeo       F1=0.6387 G=0.8706 minRec=0.7833 MCC=0.3653 fail=0
+  [RF ] CC-SG      F1=0.6455 G=0.8521 minRec=0.7500 MCC=0.3692 fail=0
+  [RF ] CC-strict  F1=0.6427 G=0.8519 minRec=0.7500 MCC=0.3649 fail=0
+  [RF ] CC-batch   F1=0.6596 G=0.8823 minRec=0.8000 MCC=0.4006 fail=0
+  [RF ] Oracle-bal F1=0.6379 G=0.8704 minRec=0.7833 MCC=0.3639 fail=0
+  [RF ] Oracle-Bayes F1=0.6280 G=0.8593 minRec=0.7667 MCC=0.3454 fail=0
+bin_d5_ir200_med: n=4020 IR=200
+
+======================================================================
+bin_d5_ir200_med  n=4020 d=5 K=2 IR=200.0
+======================================================================
+  [RF ] Base       F1=0.4987 G=0.0010 minRec=0.0000 MCC=-0.0003 fail=0
+  [RF ] Sgeo       F1=0.5257 G=0.6301 minRec=0.4667 MCC=0.1288 fail=0
+  [RF ] CC-SG      F1=0.5275 G=0.6390 minRec=0.4833 MCC=0.1343 fail=0
+  [RF ] CC-strict  F1=0.5207 G=0.6672 minRec=0.5333 MCC=0.1327 fail=0
+  [RF ] CC-batch   F1=0.5236 G=0.6863 minRec=0.5667 MCC=0.1426 fail=0
+  [RF ] Oracle-bal F1=0.5251 G=0.6283 minRec=0.4667 MCC=0.1278 fail=0
+  [RF ] Oracle-Bayes F1=0.5151 G=0.6645 minRec=0.5333 MCC=0.1244 fail=0
+bin_d5_ir200_high: n=4020 IR=200
+
+======================================================================
+bin_d5_ir200_high  n=4020 d=5 K=2 IR=200.0
+======================================================================
+  [RF ] Base       F1=0.4988 G=0.0010 minRec=0.0000 MCC=0.0000 fail=0
+  [RF ] Sgeo       F1=0.5084 G=0.5713 minRec=0.4000 MCC=0.0911 fail=0
+  [RF ] CC-SG      F1=0.5095 G=0.5719 minRec=0.4000 MCC=0.0930 fail=0
+  [RF ] CC-strict  F1=0.5050 G=0.6396 minRec=0.5000 MCC=0.1041 fail=0
+  [RF ] CC-batch   F1=0.5047 G=0.6395 minRec=0.5000 MCC=0.1038 fail=0
+  [RF ] Oracle-bal F1=0.5087 G=0.5715 minRec=0.4000 MCC=0.0918 fail=0
+  [RF ] Oracle-Bayes F1=0.5027 G=0.6587 minRec=0.5333 MCC=0.1065 fail=0
+bin_d5_ir400_low: n=4010 IR=400
+
+======================================================================
+bin_d5_ir400_low  n=4010 d=5 K=2 IR=400.0
+======================================================================
+  [RF ] Base       F1=0.4994 G=0.0010 minRec=0.0000 MCC=0.0000 fail=0
+  [RF ] Sgeo       F1=0.5987 G=0.6784 minRec=0.6000 MCC=0.2715 fail=0
+  [RF ] CC-SG      F1=0.5933 G=0.6207 minRec=0.5000 MCC=0.2452 fail=0
+  [RF ] CC-strict  F1=0.5853 G=0.6201 minRec=0.5000 MCC=0.2321 fail=0
+  [RF ] CC-batch   F1=0.5891 G=0.6203 minRec=0.5000 MCC=0.2386 fail=0
+  [RF ] Oracle-bal F1=0.6017 G=0.6786 minRec=0.6000 MCC=0.2764 fail=0
+  [RF ] Oracle-Bayes F1=0.5896 G=0.6588 minRec=0.5667 MCC=0.2460 fail=0
+bin_d5_ir400_med: n=4010 IR=400
+
+======================================================================
+bin_d5_ir400_med  n=4010 d=5 K=2 IR=400.0
+======================================================================
+  [RF ] Base       F1=0.4994 G=0.0010 minRec=0.0000 MCC=0.0000 fail=0
+  [RF ] Sgeo       F1=0.5415 G=0.4975 minRec=0.4333 MCC=0.1435 fail=0
+  [RF ] CC-SG      F1=0.5350 G=0.3936 minRec=0.3000 MCC=0.1099 fail=0
+  [RF ] CC-strict  F1=0.5313 G=0.4121 minRec=0.3333 MCC=0.1092 fail=0
+  [RF ] CC-batch   F1=0.5310 G=0.3931 minRec=0.3000 MCC=0.1032 fail=0
+  [RF ] Oracle-bal F1=0.5456 G=0.5442 minRec=0.4667 MCC=0.1562 fail=0
+  [RF ] Oracle-Bayes F1=0.5257 G=0.3925 minRec=0.3000 MCC=0.0947 fail=0
+bin_d5_ir400_high: n=4010 IR=400
+
+======================================================================
+bin_d5_ir400_high  n=4010 d=5 K=2 IR=400.0
+======================================================================
+  [RF ] Base       F1=0.4994 G=0.0010 minRec=0.0000 MCC=0.0000 fail=0
+  [RF ] Sgeo       F1=0.5051 G=0.3427 minRec=0.2667 MCC=0.0566 fail=0
+  [RF ] CC-SG      F1=0.5080 G=0.4076 minRec=0.3333 MCC=0.0710 fail=0
+  [RF ] CC-strict  F1=0.5069 G=0.5162 minRec=0.4333 MCC=0.0850 fail=0
+  [RF ] CC-batch   F1=0.5069 G=0.5162 minRec=0.4333 MCC=0.0849 fail=0
+  [RF ] Oracle-bal F1=0.5051 G=0.3156 minRec=0.2667 MCC=0.0558 fail=0
+  [RF ] Oracle-Bayes F1=0.5044 G=0.4697 minRec=0.4000 MCC=0.0755 fail=0
+bin_d10_ir100_low: n=4040 IR=100
+
+======================================================================
+bin_d10_ir100_low  n=4040 d=10 K=2 IR=100.0
+======================================================================
+  [RF ] Base       F1=0.5900 G=0.2768 minRec=0.1083 MCC=0.2751 fail=0
+  [RF ] Sgeo       F1=0.7105 G=0.9039 minRec=0.8417 MCC=0.4876 fail=0
+  [RF ] CC-SG      F1=0.7216 G=0.8825 minRec=0.8000 MCC=0.4960 fail=0
+  [RF ] CC-strict  F1=0.7086 G=0.8771 minRec=0.7917 MCC=0.4745 fail=0
+  [RF ] CC-batch   F1=0.7138 G=0.8820 minRec=0.8000 MCC=0.4840 fail=0
+  [RF ] Oracle-bal F1=0.7150 G=0.9043 minRec=0.8417 MCC=0.4943 fail=0
+  [RF ] Oracle-Bayes F1=0.7179 G=0.8867 minRec=0.8083 MCC=0.4919 fail=0
+bin_d10_ir100_med: n=4040 IR=100
+
+======================================================================
+bin_d10_ir100_med  n=4040 d=10 K=2 IR=100.0
+======================================================================
+  [RF ] Base       F1=0.4975 G=0.0010 minRec=0.0000 MCC=0.0000 fail=0
+  [RF ] Sgeo       F1=0.5649 G=0.7733 minRec=0.6500 MCC=0.2299 fail=0
+  [RF ] CC-SG      F1=0.5710 G=0.7391 minRec=0.6083 MCC=0.2303 fail=0
+  [RF ] CC-strict  F1=0.5594 G=0.7416 minRec=0.6167 MCC=0.2146 fail=0
+  [RF ] CC-batch   F1=0.5645 G=0.7535 minRec=0.6250 MCC=0.2240 fail=0
+  [RF ] Oracle-bal F1=0.5659 G=0.7777 minRec=0.6583 MCC=0.2329 fail=0
+  [RF ] Oracle-Bayes F1=0.5504 G=0.7750 minRec=0.6750 MCC=0.2131 fail=0
+bin_d10_ir100_high: n=4040 IR=100
+
+======================================================================
+bin_d10_ir100_high  n=4040 d=10 K=2 IR=100.0
+======================================================================
+  [RF ] Base       F1=0.4975 G=0.0010 minRec=0.0000 MCC=0.0000 fail=0
+  [RF ] Sgeo       F1=0.5178 G=0.5204 minRec=0.3583 MCC=0.1019 fail=0
+  [RF ] CC-SG      F1=0.5166 G=0.4564 minRec=0.2750 MCC=0.0823 fail=0
+  [RF ] CC-strict  F1=0.5100 G=0.5091 minRec=0.3500 MCC=0.0896 fail=0
+  [RF ] CC-batch   F1=0.5083 G=0.5006 minRec=0.3333 MCC=0.0839 fail=0
+  [RF ] Oracle-bal F1=0.5239 G=0.5420 minRec=0.3833 MCC=0.1156 fail=0
+  [RF ] Oracle-Bayes F1=0.5068 G=0.6293 minRec=0.5000 MCC=0.1171 fail=0
+bin_d10_ir200_low: n=4020 IR=200
+
+======================================================================
+bin_d10_ir200_low  n=4020 d=10 K=2 IR=200.0
+======================================================================
+  [RF ] Base       F1=0.4988 G=0.0010 minRec=0.0000 MCC=0.0000 fail=0
+  [RF ] Sgeo       F1=0.6271 G=0.8506 minRec=0.7500 MCC=0.3409 fail=0
+  [RF ] CC-SG      F1=0.6482 G=0.8436 minRec=0.7333 MCC=0.3701 fail=0
+  [RF ] CC-strict  F1=0.6407 G=0.8105 minRec=0.6833 MCC=0.3486 fail=0
+  [RF ] CC-batch   F1=0.6429 G=0.8346 minRec=0.7167 MCC=0.3587 fail=0
+  [RF ] Oracle-bal F1=0.6278 G=0.8421 minRec=0.7333 MCC=0.3387 fail=0
+  [RF ] Oracle-Bayes F1=0.6470 G=0.8260 minRec=0.7000 MCC=0.3616 fail=0
+bin_d10_ir200_med: n=4020 IR=200
+
+======================================================================
+bin_d10_ir200_med  n=4020 d=10 K=2 IR=200.0
+======================================================================
+  [RF ] Base       F1=0.4988 G=0.0010 minRec=0.0000 MCC=0.0000 fail=0
+  [RF ] Sgeo       F1=0.5747 G=0.7309 minRec=0.5667 MCC=0.2242 fail=0
+  [RF ] CC-SG      F1=0.5669 G=0.6613 minRec=0.4667 MCC=0.1932 fail=0
+  [RF ] CC-strict  F1=0.5701 G=0.7173 minRec=0.5500 MCC=0.2140 fail=0
+  [RF ] CC-batch   F1=0.5704 G=0.7273 minRec=0.5667 MCC=0.2175 fail=0
+  [RF ] Oracle-bal F1=0.5815 G=0.7593 minRec=0.6167 MCC=0.2444 fail=0
+  [RF ] Oracle-Bayes F1=0.5605 G=0.7340 minRec=0.5833 MCC=0.2050 fail=0
+bin_d10_ir200_high: n=4020 IR=200
+
+======================================================================
+bin_d10_ir200_high  n=4020 d=10 K=2 IR=200.0
+======================================================================
+  [RF ] Base       F1=0.4988 G=0.0010 minRec=0.0000 MCC=0.0000 fail=0
+  [RF ] Sgeo       F1=0.5221 G=0.5115 minRec=0.3000 MCC=0.0937 fail=0
+  [RF ] CC-SG      F1=0.5205 G=0.4338 minRec=0.2500 MCC=0.0815 fail=0
+  [RF ] CC-strict  F1=0.5094 G=0.4439 minRec=0.2667 MCC=0.0690 fail=0
+  [RF ] CC-batch   F1=0.5078 G=0.3983 minRec=0.2333 MCC=0.0600 fail=0
+  [RF ] Oracle-bal F1=0.5243 G=0.5351 minRec=0.3333 MCC=0.1033 fail=0
+  [RF ] Oracle-Bayes F1=0.5021 G=0.3964 minRec=0.2333 MCC=0.0529 fail=0
+bin_d10_ir400_low: n=4010 IR=400
+
+======================================================================
+bin_d10_ir400_low  n=4010 d=10 K=2 IR=400.0
+======================================================================
+  [RF ] Base       F1=0.4994 G=0.0010 minRec=0.0000 MCC=0.0000 fail=0
+  [RF ] Sgeo       F1=0.6131 G=0.4626 minRec=0.3667 MCC=0.2515 fail=0
+  [RF ] CC-SG      F1=0.6014 G=0.3964 minRec=0.3000 MCC=0.2159 fail=0
+  [RF ] CC-strict  F1=0.5983 G=0.4431 minRec=0.3333 MCC=0.2161 fail=0
+  [RF ] CC-batch   F1=0.5978 G=0.4431 minRec=0.3333 MCC=0.2152 fail=0
+  [RF ] Oracle-bal F1=0.6153 G=0.4901 minRec=0.3667 MCC=0.2547 fail=0
+  [RF ] Oracle-Bayes F1=0.6036 G=0.4432 minRec=0.3333 MCC=0.2252 fail=0
+bin_d10_ir400_med: n=4010 IR=400
+
+======================================================================
+bin_d10_ir400_med  n=4010 d=10 K=2 IR=400.0
+======================================================================
+  [RF ] Base       F1=0.4994 G=0.0010 minRec=0.0000 MCC=0.0000 fail=0
+  [RF ] Sgeo       F1=0.5516 G=0.3757 minRec=0.2667 MCC=0.1305 fail=0
+  [RF ] CC-SG      F1=0.5307 G=0.2351 minRec=0.1667 MCC=0.0791 fail=0
+  [RF ] CC-strict  F1=0.5339 G=0.2817 minRec=0.2000 MCC=0.0904 fail=0
+  [RF ] CC-batch   F1=0.5341 G=0.2817 minRec=0.2000 MCC=0.0909 fail=0
+  [RF ] Oracle-bal F1=0.5548 G=0.3758 minRec=0.2667 MCC=0.1358 fail=0
+  [RF ] Oracle-Bayes F1=0.5319 G=0.2817 minRec=0.2000 MCC=0.0872 fail=0
+bin_d10_ir400_high: n=4010 IR=400
+
+======================================================================
+bin_d10_ir400_high  n=4010 d=10 K=2 IR=400.0
+======================================================================
+  [RF ] Base       F1=0.4994 G=0.0010 minRec=0.0000 MCC=0.0000 fail=0
+  [RF ] Sgeo       F1=0.4933 G=0.0010 minRec=0.0000 MCC=-0.0077 fail=0
+  [RF ] CC-SG      F1=0.4950 G=0.0010 minRec=0.0000 MCC=-0.0065 fail=0
+  [RF ] CC-strict  F1=0.4947 G=0.0010 minRec=0.0000 MCC=-0.0066 fail=0
+  [RF ] CC-batch   F1=0.4944 G=0.0010 minRec=0.0000 MCC=-0.0068 fail=0
+  [RF ] Oracle-bal F1=0.4932 G=0.0010 minRec=0.0000 MCC=-0.0078 fail=0
+  [RF ] Oracle-Bayes F1=0.4945 G=0.0010 minRec=0.0000 MCC=-0.0068 fail=0
+mc3_d5_ir100+300_low: n=4053 IR=308
+
+======================================================================
+mc3_d5_ir100+300_low  n=4053 d=5 K=3 IR=307.7
+======================================================================
+  [RF ] Base       F1=0.5124 G=0.0075 minRec=0.0000 MCC=0.4844 fail=0
+  [RF ] Sgeo       F1=0.5984 G=0.9433 minRec=0.9556 MCC=0.5021 fail=0
+  [RF ] CC-SG      F1=0.6066 G=0.8989 minRec=0.8333 MCC=0.5142 fail=0
+  [RF ] CC-strict  F1=0.6089 G=0.9205 minRec=0.8889 MCC=0.5153 fail=0
+  [RF ] CC-batch   F1=0.6174 G=0.9240 minRec=0.8889 MCC=0.5267 fail=0
+  [RF ] Oracle-bal F1=0.5896 G=0.9149 minRec=0.8778 MCC=0.4914 fail=0
+  [RF ] Oracle-Bayes F1=0.6044 G=0.8933 minRec=0.9111 MCC=0.5191 fail=0
+mc3_d5_ir100+300_med: n=4053 IR=308
+
+======================================================================
+mc3_d5_ir100+300_med  n=4053 d=5 K=3 IR=307.7
+======================================================================
+  [RF ] Base       F1=0.3311 G=0.0001 minRec=0.0000 MCC=0.0000 fail=0
+  [RF ] Sgeo       F1=0.3859 G=0.4906 minRec=0.5444 MCC=0.1572 fail=0
+  [RF ] CC-SG      F1=0.3956 G=0.5188 minRec=0.5667 MCC=0.1571 fail=0
+  [RF ] CC-strict  F1=0.3745 G=0.4819 minRec=0.4778 MCC=0.1458 fail=0
+  [RF ] CC-batch   F1=0.3875 G=0.5511 minRec=0.5667 MCC=0.1572 fail=0
+  [RF ] Oracle-bal F1=0.3906 G=0.5316 minRec=0.5667 MCC=0.1695 fail=0
+  [RF ] Oracle-Bayes F1=0.3765 G=0.5149 minRec=0.5556 MCC=0.1444 fail=0
+mc3_d5_ir100+300_high: n=4053 IR=308
+
+======================================================================
+mc3_d5_ir100+300_high  n=4053 d=5 K=3 IR=307.7
+======================================================================
+  [RF ] Base       F1=0.3311 G=0.0001 minRec=0.0000 MCC=0.0000 fail=0
+  [RF ] Sgeo       F1=0.3785 G=0.5893 minRec=0.5444 MCC=0.1599 fail=0
+  [RF ] CC-SG      F1=0.3806 G=0.5977 minRec=0.5444 MCC=0.1649 fail=0
+  [RF ] CC-strict  F1=0.3711 G=0.5728 minRec=0.5667 MCC=0.1575 fail=0
+  [RF ] CC-batch   F1=0.3689 G=0.5428 minRec=0.5444 MCC=0.1604 fail=0
+  [RF ] Oracle-bal F1=0.3781 G=0.5835 minRec=0.5667 MCC=0.1562 fail=0
+  [RF ] Oracle-Bayes F1=0.3589 G=0.5929 minRec=0.5667 MCC=0.1579 fail=0
+[OK] oracle 36.1 min

@@ -1,0 +1,16 @@
+task,rep,fold,cls,n_bnd,n_cert,n_fb,n_viol
+OrganA-6ext,0,0,4,317,0,317,281
+OrganA-6ext,0,1,4,317,0,317,229
+OrganA-6ext,0,2,4,317,0,317,314
+OrganA-6ext,0,3,4,316,0,316,269
+OrganA-6ext,0,4,4,316,0,316,275
+OrganA-6ext,1,0,4,317,0,317,257
+OrganA-6ext,1,1,4,317,0,317,273
+OrganA-6ext,1,2,4,317,0,317,251
+OrganA-6ext,1,3,4,316,0,316,249
+OrganA-6ext,1,4,4,316,0,316,282
+OrganA-6ext,2,0,4,317,0,317,285
+OrganA-6ext,2,1,4,317,0,317,285
+OrganA-6ext,2,2,4,317,0,317,317
+OrganA-6ext,2,3,4,316,0,316,259
+OrganA-6ext,2,4,4,316,0,316,300

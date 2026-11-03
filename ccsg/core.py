@@ -3,7 +3,7 @@
 This module contains the low-level components shared by the oversampler:
 a robust Gaussian-mixture fit for discovering minority sub-concepts, the
 calibrated component-local kernel-density core sampler, the one-vs-rest
-surrogate used for the in-loop admission test, and small geometric helpers.
+surrogate used for the admission test, and small geometric helpers.
 """
 from __future__ import annotations
 
@@ -95,7 +95,7 @@ def core_samples(rng, gmm, comps, n):
 
 
 # --------------------------------------------------------------------------- #
-# Surrogate for the in-loop admission test
+# Surrogate for the admission test
 # --------------------------------------------------------------------------- #
 def ovr_surrogate(X, y, c, seed, n_estimators=30):
     """Fit a one-vs-rest gradient-boosted surrogate for class ``c``."""

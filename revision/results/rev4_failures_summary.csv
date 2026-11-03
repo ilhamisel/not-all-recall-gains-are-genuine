@@ -1,0 +1,7 @@
+dataset,method,n_fail,file
+Wine_Red,ADASYN,15,results_master_v2.csv
+Wine_Red,KMeans-SMOTE,14,results_master_v2.csv
+Wine_Red,SVM-SMOTE,1,results_master_v2.csv
+Wine_White,KMeans-SMOTE,15,results_master_v2.csv
+Wine_White,SVM-SMOTE,6,results_master_v2.csv
+Wine_Red,ADASYN,15,results_xai_v5.csv

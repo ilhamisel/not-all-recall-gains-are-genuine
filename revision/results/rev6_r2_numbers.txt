@@ -1,0 +1,279 @@
+assemble type <class 'pandas.core.frame.DataFrame'>
+methods ['ADASYN', 'BalancedRF', 'Base', 'Borderline', 'CC-SG', 'CC-batch', 'CC-strict', 'GMM-S', 'GS-0.85', 'GeoF', 'KMeans-SMOTE', 'MWMOTE', 'PlainKDE', 'ROS', 'SG-KDE', 'SMOTE', 'SMOTE-ENN', 'SMOTE-IPF', 'SMOTE-IPF-cons', 'SMOTE-IPF-old', 'SMOTE-Tomek', 'SVM-SMOTE', 'Sgeo', 'ThreshMove', 'VAE', 'Weighted']
+
+== (1) primary RF: CC-strict vs core rivals, Holm m=10
+min_recall  Base         +0.276 (10/10) p=0.0020 holm=0.020
+min_recall  Weighted     +0.298 (10/10) p=0.0020 holm=0.020
+min_recall  SMOTE        +0.115 (9/10) p=0.0059 holm=0.035
+min_recall  Borderline   +0.148 (10/10) p=0.0020 holm=0.020
+min_recall  ADASYN       +0.129 (9/10) p=0.0039 holm=0.027
+min_recall  SMOTE-ENN    -0.006 (4/9) p=0.7344 holm=1.000
+min_recall  SMOTE-Tomek  +0.115 (9/10) p=0.0059 holm=0.035
+min_recall  GS-0.85      +0.052 (8/10) p=0.0273 holm=0.082
+min_recall  Sgeo         -0.039 (1/10) p=0.0098 holm=0.039
+min_recall  CC-SG        +0.001 (3/9) p=0.6523 holm=1.000
+rare_recall Base         +0.272 (10/10) p=0.0020 holm=0.020
+rare_recall Weighted     +0.295 (10/10) p=0.0020 holm=0.020
+rare_recall SMOTE        +0.118 (9/10) p=0.0039 holm=0.027
+rare_recall Borderline   +0.147 (10/10) p=0.0020 holm=0.020
+rare_recall ADASYN       +0.127 (9/10) p=0.0039 holm=0.027
+rare_recall SMOTE-ENN    -0.002 (5/9) p=1.0000 holm=1.000
+rare_recall SMOTE-Tomek  +0.112 (9/10) p=0.0039 holm=0.027
+rare_recall GS-0.85      +0.056 (8/9) p=0.0117 holm=0.047
+rare_recall Sgeo         -0.038 (1/9) p=0.0195 holm=0.059
+rare_recall CC-SG        +0.004 (3/9) p=0.6523 holm=1.000
+gmean       Base         +0.239 (10/10) p=0.0020 holm=0.020
+gmean       Weighted     +0.261 (10/10) p=0.0020 holm=0.020
+gmean       SMOTE        +0.068 (8/10) p=0.0195 holm=0.117
+gmean       Borderline   +0.108 (10/10) p=0.0020 holm=0.020
+gmean       ADASYN       +0.083 (9/10) p=0.0137 holm=0.096
+gmean       SMOTE-ENN    -0.010 (6/10) p=0.9219 holm=0.984
+gmean       SMOTE-Tomek  +0.068 (9/10) p=0.0195 holm=0.117
+gmean       GS-0.85      +0.029 (8/10) p=0.0488 holm=0.195
+gmean       Sgeo         -0.018 (2/10) p=0.0488 holm=0.195
+gmean       CC-SG        -0.000 (3/10) p=0.4922 holm=0.984
+f1_macro    Base         +0.049 (9/10) p=0.0371 holm=0.186
+f1_macro    Weighted     +0.064 (9/10) p=0.0098 holm=0.078
+f1_macro    SMOTE        +0.009 (7/10) p=0.1934 holm=0.387
+f1_macro    Borderline   +0.010 (7/10) p=0.1934 holm=0.387
+f1_macro    ADASYN       +0.019 (8/10) p=0.0098 holm=0.078
+f1_macro    SMOTE-ENN    +0.048 (9/10) p=0.0039 holm=0.035
+f1_macro    SMOTE-Tomek  +0.010 (8/10) p=0.1055 holm=0.336
+f1_macro    GS-0.85      +0.011 (6/10) p=0.0840 holm=0.336
+f1_macro    Sgeo         +0.018 (10/10) p=0.0020 holm=0.020
+f1_macro    CC-SG        -0.002 (3/10) p=0.0273 holm=0.164
+mcc         Base         +0.067 (7/10) p=0.1309 holm=0.451
+mcc         Weighted     +0.097 (7/10) p=0.0645 holm=0.451
+mcc         SMOTE        +0.022 (6/10) p=0.1055 holm=0.451
+mcc         Borderline   +0.023 (7/10) p=0.1309 holm=0.451
+mcc         ADASYN       +0.031 (7/10) p=0.1055 holm=0.451
+mcc         SMOTE-ENN    +0.069 (9/10) p=0.0195 holm=0.176
+mcc         SMOTE-Tomek  +0.023 (7/10) p=0.0840 holm=0.451
+mcc         GS-0.85      +0.021 (8/10) p=0.0645 holm=0.451
+mcc         Sgeo         +0.020 (9/10) p=0.0039 holm=0.039
+mcc         CC-SG        -0.003 (3/10) p=0.0488 holm=0.391
+
+== (2) Friedman, 10 methods, CC-strict as ours
+min_recall Base=9.30 Weighted=9.50 SMOTE=5.40 Borderline=7.35 ADASYN=6.55 SMOTE-ENN=2.45 SMOTE-Tomek=5.60 GS-0.85=4.20 Sgeo=1.70 CC-strict=2.95 chi2=73.8 p=0.0000
+rare_recall Base=9.05 Weighted=9.25 SMOTE=5.65 Borderline=7.40 ADASYN=6.50 SMOTE-ENN=3.10 SMOTE-Tomek=5.30 GS-0.85=4.25 Sgeo=1.75 CC-strict=2.75 chi2=69.0 p=0.0000
+gmean Base=9.20 Weighted=9.65 SMOTE=4.85 Borderline=7.40 ADASYN=6.45 SMOTE-ENN=2.90 SMOTE-Tomek=5.65 GS-0.85=4.30 Sgeo=1.80 CC-strict=2.80 chi2=71.2 p=0.0000
+f1_macro Base=7.60 Weighted=8.35 SMOTE=3.85 Borderline=4.30 ADASYN=5.85 SMOTE-ENN=7.90 SMOTE-Tomek=4.35 GS-0.85=4.50 Sgeo=5.60 CC-strict=2.70 chi2=35.8 p=0.0000
+mcc Base=6.50 Weighted=7.35 SMOTE=5.05 Borderline=5.20 ADASYN=5.95 SMOTE-ENN=6.40 SMOTE-Tomek=5.15 GS-0.85=5.40 Sgeo=4.70 CC-strict=3.30 chi2=12.4 p=0.1912
+
+== (3) per-dataset min_recall
+CC-strict Wine_Red=0.167 Wine_White=0.183 abalone_19=0.062 car_eval_4=0.985 ecoli=0.790 mammography=0.785 oil=0.610 ozone_level=0.574 us_crime=0.687 yeast_me2=0.581
+CC-SG Wine_Red=0.167 Wine_White=0.142 abalone_19=0.070 car_eval_4=0.990 ecoli=0.781 mammography=0.787 oil=0.618 ozone_level=0.587 us_crime=0.682 yeast_me2=0.588
+Sgeo Wine_Red=0.169 Wine_White=0.158 abalone_19=0.090 car_eval_4=0.995 ecoli=0.838 mammography=0.826 oil=0.658 ozone_level=0.661 us_crime=0.769 yeast_me2=0.645
+SMOTE-ENN Wine_Red=0.169 Wine_White=0.025 abalone_19=0.224 car_eval_4=0.985 ecoli=0.838 mammography=0.782 oil=0.545 ozone_level=0.542 us_crime=0.776 yeast_me2=0.600
+
+== (4) RF primary means and mean per-dataset std
+CC-strict min_recall=0.542±0.12 rare_recall=0.534±0.14 gmean=0.614±0.09 f1_macro=0.680±0.03 mcc=0.504±0.06
+CC-SG min_recall=0.541±0.11 rare_recall=0.530±0.14 gmean=0.614±0.09 f1_macro=0.682±0.04 mcc=0.507±0.07
+
+== (5) XGB/LR
+XGB CC-strict min_recall=0.470 gmean=0.554 f1_macro=0.679 mcc=0.497
+XGB CC-SG min_recall=0.472 gmean=0.564 f1_macro=0.682 mcc=0.503
+XGB Base min_recall=0.334 gmean=0.452 f1_macro=0.657 mcc=0.472
+XGB v5 Sgeo min_recall=0.499 gmean=0.577 f1_macro=0.669 mcc=0.482
+XGB v5 CC-SG min_recall=0.472 gmean=0.564 f1_macro=0.682 mcc=0.503
+XGB v5 Base min_recall=0.334 gmean=0.452 f1_macro=0.657 mcc=0.472
+XGB f1_macro strict-GeoB +0.010 wins 8/10 p=0.0391
+XGB mcc strict-GeoB +0.015 wins 8/10 p=0.0547
+XGB min_recall strict-GeoB -0.029 wins 2/10 p=0.0195
+LR CC-strict min_recall=0.737 gmean=0.721 f1_macro=0.583 mcc=0.380
+LR CC-SG min_recall=0.735 gmean=0.720 f1_macro=0.583 mcc=0.381
+LR Base min_recall=0.303 gmean=0.432 f1_macro=0.618 mcc=0.408
+LR v5 Sgeo min_recall=0.775 gmean=0.730 f1_macro=0.565 mcc=0.363
+LR v5 CC-SG min_recall=0.735 gmean=0.720 f1_macro=0.583 mcc=0.381
+LR v5 Base min_recall=0.303 gmean=0.432 f1_macro=0.618 mcc=0.408
+LR f1_macro strict-GeoB +0.018 wins 9/10 p=0.0273
+LR mcc strict-GeoB +0.017 wins 9/10 p=0.0840
+LR min_recall strict-GeoB -0.038 wins 0/10 p=0.0078
+
+== (6) suites: CC-strict vs rivals (rev5_holm)
+external/all min_recall Base        +0.139 (10/10) p=0.0020 holm=0.018 m=9
+external/all min_recall Weighted    +0.117 (8/10) p=0.0273 holm=0.219 m=9
+external/all min_recall SMOTE       +0.030 (7/10) p=0.0488 holm=0.244 m=9
+external/all min_recall SMOTE-ENN   -0.095 (1/10) p=0.0273 holm=0.219 m=9
+external/all min_recall SMOTE-Tomek +0.032 (8/10) p=0.0371 holm=0.223 m=9
+external/all min_recall SMOTE-IPF   -0.080 (3/10) p=0.1934 holm=0.580 m=9
+external/all min_recall GS-0.85     +0.028 (6/10) p=0.3750 holm=0.750 m=9
+external/all min_recall Sgeo        -0.045 (2/10) p=0.1309 holm=0.523 m=9
+external/all min_recall CC-SG       -0.015 (5/10) p=0.8203 holm=0.820 m=9
+external/all f1_macro   Base        +0.042 (8/10) p=0.0098 holm=0.078 m=9
+external/all f1_macro   Weighted    +0.035 (9/10) p=0.0039 holm=0.035 m=9
+external/all f1_macro   SMOTE       +0.005 (5/10) p=0.6953 holm=1.000 m=9
+external/all f1_macro   SMOTE-ENN   +0.004 (7/10) p=0.6953 holm=1.000 m=9
+external/all f1_macro   SMOTE-Tomek +0.006 (6/10) p=0.4922 holm=1.000 m=9
+external/all f1_macro   SMOTE-IPF   +0.030 (8/10) p=0.0645 holm=0.387 m=9
+external/all f1_macro   GS-0.85     +0.016 (8/10) p=0.0273 holm=0.191 m=9
+external/all f1_macro   Sgeo        +0.017 (7/10) p=0.1602 holm=0.801 m=9
+external/all f1_macro   CC-SG       -0.001 (4/10) p=1.0000 holm=1.000 m=9
+external/all mcc        Base        +0.079 (8/10) p=0.0273 holm=0.219 m=9
+external/all mcc        Weighted    +0.066 (8/10) p=0.0137 holm=0.123 m=9
+external/all mcc        SMOTE       +0.014 (5/10) p=0.4316 holm=1.000 m=9
+external/all mcc        SMOTE-ENN   -0.004 (6/10) p=0.9219 holm=1.000 m=9
+external/all mcc        SMOTE-Tomek +0.015 (6/10) p=0.3223 holm=1.000 m=9
+external/all mcc        SMOTE-IPF   +0.041 (7/10) p=0.1055 holm=0.633 m=9
+external/all mcc        GS-0.85     +0.034 (8/10) p=0.0488 holm=0.342 m=9
+external/all mcc        Sgeo        +0.033 (7/10) p=0.1602 holm=0.801 m=9
+external/all mcc        CC-SG       +0.002 (4/10) p=0.8203 holm=1.000 m=9
+external/excl_flagged min_recall Base        +0.142 (9/9) p=0.0039 holm=0.035 m=9
+external/excl_flagged min_recall Weighted    +0.120 (7/9) p=0.0391 holm=0.312 m=9
+external/excl_flagged min_recall SMOTE       +0.027 (6/9) p=0.0977 holm=0.488 m=9
+external/excl_flagged min_recall SMOTE-ENN   -0.104 (1/9) p=0.0391 holm=0.312 m=9
+external/excl_flagged min_recall SMOTE-Tomek +0.030 (7/9) p=0.0742 holm=0.445 m=9
+external/excl_flagged min_recall SMOTE-IPF   -0.089 (3/9) p=0.2031 holm=0.609 m=9
+external/excl_flagged min_recall GS-0.85     +0.019 (5/9) p=0.6523 holm=1.000 m=9
+external/excl_flagged min_recall Sgeo        -0.051 (1/9) p=0.0977 holm=0.488 m=9
+external/excl_flagged min_recall CC-SG       -0.016 (4/9) p=1.0000 holm=1.000 m=9
+external/excl_flagged f1_macro   Base        +0.044 (7/9) p=0.0195 holm=0.156 m=9
+external/excl_flagged f1_macro   Weighted    +0.037 (8/9) p=0.0078 holm=0.070 m=9
+external/excl_flagged f1_macro   SMOTE       +0.005 (4/9) p=1.0000 holm=1.000 m=9
+external/excl_flagged f1_macro   SMOTE-ENN   +0.003 (6/9) p=0.8203 holm=1.000 m=9
+external/excl_flagged f1_macro   SMOTE-Tomek +0.005 (5/9) p=0.7344 holm=1.000 m=9
+external/excl_flagged f1_macro   SMOTE-IPF   +0.027 (7/9) p=0.1289 holm=0.773 m=9
+external/excl_flagged f1_macro   GS-0.85     +0.015 (7/9) p=0.0547 holm=0.383 m=9
+external/excl_flagged f1_macro   Sgeo        +0.018 (6/9) p=0.1641 holm=0.820 m=9
+external/excl_flagged f1_macro   CC-SG       -0.001 (3/9) p=0.8438 holm=1.000 m=9
+external/excl_flagged mcc        Base        +0.082 (7/9) p=0.0547 holm=0.438 m=9
+external/excl_flagged mcc        Weighted    +0.069 (7/9) p=0.0273 holm=0.246 m=9
+external/excl_flagged mcc        SMOTE       +0.013 (4/9) p=0.6523 holm=1.000 m=9
+external/excl_flagged mcc        SMOTE-ENN   -0.007 (5/9) p=0.7344 holm=1.000 m=9
+external/excl_flagged mcc        SMOTE-Tomek +0.014 (5/9) p=0.4961 holm=1.000 m=9
+external/excl_flagged mcc        SMOTE-IPF   +0.034 (6/9) p=0.2031 holm=1.000 m=9
+external/excl_flagged mcc        GS-0.85     +0.032 (7/9) p=0.0977 holm=0.684 m=9
+external/excl_flagged mcc        Sgeo        +0.037 (6/9) p=0.1641 holm=0.984 m=9
+external/excl_flagged mcc        CC-SG       +0.002 (3/9) p=1.0000 holm=1.000 m=9
+real/all min_recall Base        +0.214 (9/9) p=0.0039 holm=0.043 m=11
+real/all min_recall Weighted    +0.224 (9/9) p=0.0039 holm=0.043 m=11
+real/all min_recall ThreshMove  +0.115 (6/9) p=0.1484 holm=0.656 m=11
+real/all min_recall SMOTE       +0.154 (7/9) p=0.0273 holm=0.191 m=11
+real/all min_recall SMOTE-ENN   +0.106 (7/9) p=0.1289 holm=0.656 m=11
+real/all min_recall SMOTE-IPF   +0.083 (8/9) p=0.1211 holm=0.656 m=11
+real/all min_recall MWMOTE      +0.188 (8/9) p=0.0195 holm=0.156 m=11
+real/all min_recall VAE         +0.170 (9/9) p=0.0039 holm=0.043 m=11
+real/all min_recall GS-0.85     +0.078 (6/9) p=0.1289 holm=0.656 m=11
+real/all min_recall Sgeo        -0.025 (3/9) p=0.1094 holm=0.656 m=11
+real/all min_recall CC-SG       -0.006 (4/9) p=0.4258 holm=0.656 m=11
+real/all f1_macro   Base        +0.074 (8/9) p=0.0391 holm=0.312 m=11
+real/all f1_macro   Weighted    +0.078 (8/9) p=0.0195 holm=0.215 m=11
+real/all f1_macro   ThreshMove  +0.030 (6/9) p=0.3594 holm=0.902 m=11
+real/all f1_macro   SMOTE       +0.043 (6/9) p=0.1289 holm=0.516 m=11
+real/all f1_macro   SMOTE-ENN   +0.035 (7/9) p=0.0977 holm=0.488 m=11
+real/all f1_macro   SMOTE-IPF   +0.050 (8/9) p=0.0547 holm=0.383 m=11
+real/all f1_macro   MWMOTE      +0.062 (7/9) p=0.0195 holm=0.215 m=11
+real/all f1_macro   VAE         +0.060 (8/9) p=0.0547 holm=0.383 m=11
+real/all f1_macro   GS-0.85     +0.037 (8/9) p=0.0273 holm=0.246 m=11
+real/all f1_macro   Sgeo        +0.007 (6/9) p=0.3594 holm=0.902 m=11
+real/all f1_macro   CC-SG       -0.005 (3/9) p=0.3008 holm=0.902 m=11
+real/all mcc        Base        +0.153 (8/9) p=0.0273 holm=0.246 m=11
+real/all mcc        Weighted    +0.158 (8/9) p=0.0195 holm=0.215 m=11
+real/all mcc        ThreshMove  +0.076 (6/9) p=0.3008 holm=0.820 m=11
+real/all mcc        SMOTE       +0.087 (7/9) p=0.0977 holm=0.586 m=11
+real/all mcc        SMOTE-ENN   +0.066 (7/9) p=0.1641 holm=0.820 m=11
+real/all mcc        SMOTE-IPF   +0.091 (7/9) p=0.1641 holm=0.820 m=11
+real/all mcc        MWMOTE      +0.127 (7/9) p=0.0195 holm=0.215 m=11
+real/all mcc        VAE         +0.123 (8/9) p=0.0391 holm=0.273 m=11
+real/all mcc        GS-0.85     +0.069 (8/9) p=0.0273 holm=0.246 m=11
+real/all mcc        Sgeo        +0.015 (7/9) p=0.2031 holm=0.820 m=11
+real/all mcc        CC-SG       -0.004 (3/9) p=0.6523 holm=0.820 m=11
+real/excl_flagged min_recall Base        +0.219 (7/7) p=0.0156 holm=0.172 m=11
+real/excl_flagged min_recall Weighted    +0.232 (7/7) p=0.0156 holm=0.172 m=11
+real/excl_flagged min_recall ThreshMove  +0.091 (4/7) p=0.4375 holm=0.469 m=11
+real/excl_flagged min_recall SMOTE       +0.160 (6/7) p=0.0312 holm=0.188 m=11
+real/excl_flagged min_recall SMOTE-ENN   +0.137 (6/7) p=0.0312 holm=0.188 m=11
+real/excl_flagged min_recall SMOTE-IPF   +0.148 (7/7) p=0.0156 holm=0.172 m=11
+real/excl_flagged min_recall MWMOTE      +0.196 (7/7) p=0.0156 holm=0.172 m=11
+real/excl_flagged min_recall VAE         +0.178 (7/7) p=0.0156 holm=0.172 m=11
+real/excl_flagged min_recall GS-0.85     +0.099 (5/7) p=0.1562 holm=0.469 m=11
+real/excl_flagged min_recall Sgeo        -0.036 (2/7) p=0.0781 holm=0.312 m=11
+real/excl_flagged min_recall CC-SG       -0.015 (2/7) p=0.1562 holm=0.469 m=11
+real/excl_flagged f1_macro   Base        +0.088 (6/7) p=0.0781 holm=0.625 m=11
+real/excl_flagged f1_macro   Weighted    +0.094 (6/7) p=0.0469 holm=0.469 m=11
+real/excl_flagged f1_macro   ThreshMove  +0.031 (4/7) p=0.5781 holm=0.938 m=11
+real/excl_flagged f1_macro   SMOTE       +0.053 (5/7) p=0.1562 holm=0.766 m=11
+real/excl_flagged f1_macro   SMOTE-ENN   +0.045 (6/7) p=0.1094 holm=0.766 m=11
+real/excl_flagged f1_macro   SMOTE-IPF   +0.056 (6/7) p=0.1094 holm=0.766 m=11
+real/excl_flagged f1_macro   MWMOTE      +0.075 (6/7) p=0.0312 holm=0.344 m=11
+real/excl_flagged f1_macro   VAE         +0.071 (6/7) p=0.1094 holm=0.766 m=11
+real/excl_flagged f1_macro   GS-0.85     +0.044 (6/7) p=0.0469 holm=0.469 m=11
+real/excl_flagged f1_macro   Sgeo        +0.008 (5/7) p=0.4688 holm=0.938 m=11
+real/excl_flagged f1_macro   CC-SG       -0.006 (2/7) p=0.2969 holm=0.891 m=11
+real/excl_flagged mcc        Base        +0.174 (6/7) p=0.0781 holm=0.625 m=11
+real/excl_flagged mcc        Weighted    +0.181 (6/7) p=0.0469 holm=0.469 m=11
+real/excl_flagged mcc        ThreshMove  +0.075 (4/7) p=0.5781 holm=0.938 m=11
+real/excl_flagged mcc        SMOTE       +0.100 (6/7) p=0.1094 holm=0.766 m=11
+real/excl_flagged mcc        SMOTE-ENN   +0.084 (6/7) p=0.1094 holm=0.766 m=11
+real/excl_flagged mcc        SMOTE-IPF   +0.114 (6/7) p=0.1094 holm=0.766 m=11
+real/excl_flagged mcc        MWMOTE      +0.146 (6/7) p=0.0312 holm=0.344 m=11
+real/excl_flagged mcc        VAE         +0.140 (6/7) p=0.1094 holm=0.766 m=11
+real/excl_flagged mcc        GS-0.85     +0.084 (6/7) p=0.0469 holm=0.469 m=11
+real/excl_flagged mcc        Sgeo        +0.018 (6/7) p=0.2969 holm=0.891 m=11
+real/excl_flagged mcc        CC-SG       -0.006 (2/7) p=0.4688 holm=0.938 m=11
+synth/all min_recall Base        +0.256 (9/9) p=0.0039 holm=0.043 m=11
+synth/all min_recall Weighted    +0.296 (9/9) p=0.0039 holm=0.043 m=11
+synth/all min_recall ThreshMove  +0.170 (9/9) p=0.0039 holm=0.043 m=11
+synth/all min_recall SMOTE       +0.214 (9/9) p=0.0039 holm=0.043 m=11
+synth/all min_recall SMOTE-ENN   +0.202 (9/9) p=0.0039 holm=0.043 m=11
+synth/all min_recall SMOTE-IPF   +0.131 (8/9) p=0.0078 holm=0.043 m=11
+synth/all min_recall MWMOTE      +0.215 (9/9) p=0.0039 holm=0.043 m=11
+synth/all min_recall VAE         +0.068 (6/9) p=0.2500 holm=0.406 m=11
+synth/all min_recall GS-0.85     -0.039 (1/9) p=0.0938 holm=0.281 m=11
+synth/all min_recall Sgeo        +0.020 (5/9) p=0.2031 holm=0.406 m=11
+synth/all min_recall CC-SG       +0.028 (5/9) p=0.0625 holm=0.250 m=11
+synth/all f1_macro   Base        +0.065 (8/9) p=0.0078 holm=0.078 m=11
+synth/all f1_macro   Weighted    +0.085 (9/9) p=0.0039 holm=0.043 m=11
+synth/all f1_macro   ThreshMove  +0.029 (7/9) p=0.0195 holm=0.176 m=11
+synth/all f1_macro   SMOTE       +0.044 (7/9) p=0.0195 holm=0.176 m=11
+synth/all f1_macro   SMOTE-ENN   +0.041 (7/9) p=0.0195 holm=0.176 m=11
+synth/all f1_macro   SMOTE-IPF   +0.043 (7/9) p=0.0195 holm=0.176 m=11
+synth/all f1_macro   MWMOTE      +0.043 (7/9) p=0.0195 holm=0.176 m=11
+synth/all f1_macro   VAE         +0.040 (7/9) p=0.1289 holm=0.387 m=11
+synth/all f1_macro   GS-0.85     +0.007 (7/9) p=0.1641 holm=0.387 m=11
+synth/all f1_macro   Sgeo        +0.023 (7/9) p=0.0195 holm=0.176 m=11
+synth/all f1_macro   CC-SG       -0.001 (3/9) p=0.6406 holm=0.641 m=11
+synth/all mcc        Base        +0.144 (8/9) p=0.0078 holm=0.070 m=11
+synth/all mcc        Weighted    +0.186 (9/9) p=0.0039 holm=0.043 m=11
+synth/all mcc        ThreshMove  +0.073 (8/9) p=0.0078 holm=0.070 m=11
+synth/all mcc        SMOTE       +0.103 (7/9) p=0.0195 holm=0.137 m=11
+synth/all mcc        SMOTE-ENN   +0.098 (7/9) p=0.0195 holm=0.137 m=11
+synth/all mcc        SMOTE-IPF   +0.085 (7/9) p=0.0195 holm=0.137 m=11
+synth/all mcc        MWMOTE      +0.100 (7/9) p=0.0195 holm=0.137 m=11
+synth/all mcc        VAE         +0.082 (7/9) p=0.0742 holm=0.223 m=11
+synth/all mcc        GS-0.85     +0.003 (4/9) p=1.0000 holm=1.000 m=11
+synth/all mcc        Sgeo        +0.044 (9/9) p=0.0039 holm=0.043 m=11
+synth/all mcc        CC-SG       +0.004 (4/9) p=0.6406 holm=1.000 m=11
+synth/excl_flagged min_recall Base        +0.256 (9/9) p=0.0039 holm=0.043 m=11
+synth/excl_flagged min_recall Weighted    +0.296 (9/9) p=0.0039 holm=0.043 m=11
+synth/excl_flagged min_recall ThreshMove  +0.170 (9/9) p=0.0039 holm=0.043 m=11
+synth/excl_flagged min_recall SMOTE       +0.214 (9/9) p=0.0039 holm=0.043 m=11
+synth/excl_flagged min_recall SMOTE-ENN   +0.202 (9/9) p=0.0039 holm=0.043 m=11
+synth/excl_flagged min_recall SMOTE-IPF   +0.131 (8/9) p=0.0078 holm=0.043 m=11
+synth/excl_flagged min_recall MWMOTE      +0.215 (9/9) p=0.0039 holm=0.043 m=11
+synth/excl_flagged min_recall VAE         +0.068 (6/9) p=0.2500 holm=0.406 m=11
+synth/excl_flagged min_recall GS-0.85     -0.039 (1/9) p=0.0938 holm=0.281 m=11
+synth/excl_flagged min_recall Sgeo        +0.020 (5/9) p=0.2031 holm=0.406 m=11
+synth/excl_flagged min_recall CC-SG       +0.028 (5/9) p=0.0625 holm=0.250 m=11
+synth/excl_flagged f1_macro   Base        +0.065 (8/9) p=0.0078 holm=0.078 m=11
+synth/excl_flagged f1_macro   Weighted    +0.085 (9/9) p=0.0039 holm=0.043 m=11
+synth/excl_flagged f1_macro   ThreshMove  +0.029 (7/9) p=0.0195 holm=0.176 m=11
+synth/excl_flagged f1_macro   SMOTE       +0.044 (7/9) p=0.0195 holm=0.176 m=11
+synth/excl_flagged f1_macro   SMOTE-ENN   +0.041 (7/9) p=0.0195 holm=0.176 m=11
+synth/excl_flagged f1_macro   SMOTE-IPF   +0.043 (7/9) p=0.0195 holm=0.176 m=11
+synth/excl_flagged f1_macro   MWMOTE      +0.043 (7/9) p=0.0195 holm=0.176 m=11
+synth/excl_flagged f1_macro   VAE         +0.040 (7/9) p=0.1289 holm=0.387 m=11
+synth/excl_flagged f1_macro   GS-0.85     +0.007 (7/9) p=0.1641 holm=0.387 m=11
+synth/excl_flagged f1_macro   Sgeo        +0.023 (7/9) p=0.0195 holm=0.176 m=11
+synth/excl_flagged f1_macro   CC-SG       -0.001 (3/9) p=0.6406 holm=0.641 m=11
+synth/excl_flagged mcc        Base        +0.144 (8/9) p=0.0078 holm=0.070 m=11
+synth/excl_flagged mcc        Weighted    +0.186 (9/9) p=0.0039 holm=0.043 m=11
+synth/excl_flagged mcc        ThreshMove  +0.073 (8/9) p=0.0078 holm=0.070 m=11
+synth/excl_flagged mcc        SMOTE       +0.103 (7/9) p=0.0195 holm=0.137 m=11
+synth/excl_flagged mcc        SMOTE-ENN   +0.098 (7/9) p=0.0195 holm=0.137 m=11
+synth/excl_flagged mcc        SMOTE-IPF   +0.085 (7/9) p=0.0195 holm=0.137 m=11
+synth/excl_flagged mcc        MWMOTE      +0.100 (7/9) p=0.0195 holm=0.137 m=11
+synth/excl_flagged mcc        VAE         +0.082 (7/9) p=0.0742 holm=0.223 m=11
+synth/excl_flagged mcc        GS-0.85     +0.003 (4/9) p=1.0000 holm=1.000 m=11
+synth/excl_flagged mcc        Sgeo        +0.044 (9/9) p=0.0039 holm=0.043 m=11
+synth/excl_flagged mcc        CC-SG       +0.004 (4/9) p=0.6406 holm=1.000 m=11

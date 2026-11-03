@@ -1,0 +1,46 @@
+Wine_White class counts (label-encoded): {0: np.int64(20), 1: np.int64(163), 2: np.int64(1457), 3: np.int64(2198), 4: np.int64(880), 5: np.int64(175), 6: np.int64(5)}
+per fold (rep, fold, min train class count, k used by SMOTE/Borderline/ADASYN/SMOTE-ENN/Tomek/SMOTE-IPF, min test class count):
+   (0, 0, 4, 3, 1)
+   (0, 1, 4, 3, 1)
+   (0, 2, 4, 3, 1)
+   (0, 3, 4, 3, 1)
+   (0, 4, 4, 3, 1)
+   (1, 0, 4, 3, 1)
+   (1, 1, 4, 3, 1)
+   (1, 2, 4, 3, 1)
+   (1, 3, 4, 3, 1)
+   (1, 4, 4, 3, 1)
+   (2, 0, 4, 3, 1)
+   (2, 1, 4, 3, 1)
+   (2, 2, 4, 3, 1)
+   (2, 3, 4, 3, 1)
+   (2, 4, 4, 3, 1)
+  Wine_Red     min-train-count range 8-8 -> k range 5-5
+  Wine_White   min-train-count range 4-4 -> k range 3-3
+  ecoli        min-train-count range 28-28 -> k range 5-5
+  us_crime     min-train-count range 120-120 -> k range 5-5
+  oil          min-train-count range 32-33 -> k range 5-5
+  car_eval_4   min-train-count range 52-52 -> k range 5-5
+  yeast_me2    min-train-count range 40-41 -> k range 5-5
+  ozone_level  min-train-count range 58-59 -> k range 5-5
+  mammography  min-train-count range 208-208 -> k range 5-5
+  abalone_19   min-train-count range 25-26 -> k range 5-5
+
+Failed augmentation folds (n_fail>0, out of 15 folds) in result CSVs:
+   dataset       method  n_fail                  file
+  Wine_Red       ADASYN      15 results_master_v2.csv
+  Wine_Red KMeans-SMOTE      14 results_master_v2.csv
+  Wine_Red    SVM-SMOTE       1 results_master_v2.csv
+Wine_White KMeans-SMOTE      15 results_master_v2.csv
+Wine_White    SVM-SMOTE       6 results_master_v2.csv
+  Wine_Red       ADASYN      15    results_xai_v5.csv
+  failures_v2.csv: 51 rows;  {('Wine_Red', 'ADASYN', 'ValueError'): 15, ('Wine_Red', 'KMeans-SMOTE', 'RuntimeError'): 14, ('Wine_Red', 'SVM-SMOTE', 'ValueError'): 1, ('Wine_White', 'KMeans-SMOTE', 'RuntimeError'): 15, ('Wine_White', 'SVM-SMOTE', 'ValueError'): 6} | msg: No samples will be generated with the provided ratio settings.
+  failures_xai_v5.csv: 15 rows;  {('Wine_Red', 'ADASYN', 'ValueError'): 15} | msg: No samples will be generated with the provided ratio settings.
+{'primary': 'Wine_White', 'other': 'imblearn wine_quality (full)', 'n_primary': 4898, 'n_other': 4898, 'd_primary': 11, 'd_other': 11, 'uniq_primary': 3961, 'uniq_other': 3961, 'exact_overlap_unique': 3961, 'frac_other_rows_in_primary': np.float64(1.0)}
+{'primary': 'Wine_White', 'other': 'wine_quality_x (extreme suite)', 'n_primary': 4898, 'n_other': 4746, 'd_primary': 11, 'd_other': 11, 'uniq_primary': 3961, 'uniq_other': 3819, 'exact_overlap_unique': 3819, 'frac_other_rows_in_primary': np.float64(1.0)}
+{'primary': 'Wine_Red', 'other': 'wine_quality_x (extreme suite)', 'n_primary': 1599, 'n_other': 4746, 'd_primary': 11, 'd_other': 11, 'uniq_primary': 1359, 'uniq_other': 3819, 'exact_overlap_unique': 2, 'frac_other_rows_in_primary': np.float64(0.00042140750105351877)}
+{'primary': 'abalone_19', 'other': 'imblearn abalone (full)', 'n_primary': 4177, 'n_other': 4177, 'd_primary': 10, 'd_other': 10, 'uniq_primary': 4177, 'uniq_other': 4177, 'exact_overlap_unique': 4177, 'frac_other_rows_in_primary': np.float64(1.0)}
+{'primary': 'abalone_19', 'other': 'abalone_x (extreme suite)', 'n_primary': 4177, 'n_other': 3804, 'd_primary': 10, 'd_other': 10, 'uniq_primary': 4177, 'uniq_other': 3804, 'exact_overlap_unique': 3804, 'frac_other_rows_in_primary': np.float64(1.0)}
+imblearn wine_quality target: {-1: np.int64(4715), 1: np.int64(183)}
+imblearn abalone target: {-1: np.int64(3786), 1: np.int64(391)} | abalone_19 target: {-1: np.int64(4145), 1: np.int64(32)}
+abalone_x / wine_quality_x sizes: {'wine_quality_x': (4746, 31), 'abalone_x': (3804, 18)}

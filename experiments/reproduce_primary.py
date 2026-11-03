@@ -56,8 +56,8 @@ METHODS = {
     "VAE":          vae_oversample,
     "CalKDE":       calkde,
     "GeoB":         geob,
-    "CC-SG":        lambda X, y, seed=42: CCSG(random_state=seed).fit_resample(X, y),
-    "CC-SG-strict": lambda X, y, seed=42: CCSG(strict=True, random_state=seed).fit_resample(X, y),
+    "CC-SG":        lambda X, y, seed=42: CCSG(strict=True, random_state=seed).fit_resample(X, y),
+    "CC-SG-original": lambda X, y, seed=42: CCSG(strict=False, random_state=seed).fit_resample(X, y),
 }
 
 

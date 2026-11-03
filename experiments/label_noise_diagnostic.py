@@ -1,12 +1,12 @@
-"""Model-independent label-noise diagnostic (paper Section 5.3, Fig. 8).
+"""Surrogate-independent proxy diagnostic (revised paper Section 5.5, Fig. 8).
 
 For each minority class, geometric boundary proposals are generated and split
 into those the surrogate admits vs. rejects. For each proposal we then record,
 using the *real* training data only (independent of the surrogate), whether its
 nearest neighbour belongs to the majority class. Rejected proposals should sit
-near majority observations much more often than admitted ones -- evidence that
-the admission test responds to genuine class-region structure rather than to
-surrogate idiosyncrasies.
+near majority observations more often than admitted ones. This is proxy evidence
+only: a known-posterior oracle (revision/code/rev4_oracle.py) shows that surrogate
+rejections do not correspond to true label noise.
 
     python experiments/label_noise_diagnostic.py
 """

@@ -99,7 +99,7 @@ def oversample(X, y, *, beta=0.5, tau=0.5, depth=(0.25, 0.75), shrink=SHRINK,
         If ``True`` (default, the method of the revised paper), re-test every
         fallback candidate and replace failures by core samples, so that every
         delivered boundary sample passes the surrogate. ``False`` reproduces
-        the original implementation, which keeps fallback candidates untested.
+        CC-SG (non-strict), which keeps fallback candidates untested.
     seed : int
         Random seed.
     """

@@ -1,0 +1,5 @@
+other_task,primary_task,n_other,n_primary,other_rows_matched,frac_other_rows_matched,primary_rows_covered,frac_primary_rows_covered,other_rows_with_multiple_primary_matches,other_minority,other_minority_matched
+wine_quality_x,Wine_White,4746,4898,4746,1.0,4748,0.9693752552062066,1691,31,31
+wine_quality_x,Wine_Red,4746,1599,2,0.00042140750105351877,3,0.001876172607879925,1,31,0
+abalone_x,abalone_19,3804,4177,3804,1.0,3804,0.9107014603782619,0,18,18
+car_eval_34,car_eval_4,1728,1728,1728,1.0,1728,1.0,0,134,134

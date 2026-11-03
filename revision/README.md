@@ -17,6 +17,7 @@ python rev4_oracle.py         # known-posterior oracle (21 Gaussian mixtures)
 python rev4_oracle_analyze.py
 python rev4_core_audit.py     # admission audit of core and boundary samples
 python rev4_lineage_all.py    # row-level lineage between suites
+python rev6_lineage_ids.py     # observation-level matched row indices
 python rev4_doc_checks.py     # neighbour rules, failed runs, surrogate facts
 python rev5_run_ipf.py        # corrected SMOTE-IPF on all suites
 python rev4_stats.py          # Wilcoxon/Holm, bootstrap CIs, batch controls
@@ -49,7 +50,7 @@ python analyze_img.py p32
 | Core / boundary admission audit | `rev4_core_audit.py` | `rev4_core_audit.csv` | Sec. 5.3 |
 | Known-posterior oracle | `rev4_oracle.py`, `rev4_oracle_analyze.py` | `rev4_oracle_*.csv`, `rev4_oracle_report.txt` | Sec. 5.4, Table 19 |
 | Corrected SMOTE-IPF | `rev5_ipf.py`, `rev5_run_ipf.py` | `rev5_ipf_*.csv` | Sec. 4.1, Tables 9–11, 13 |
-| Data lineage | `rev4_lineage_all.py` | `rev4_lineage_all.csv` | Secs. 4.6–4.7 |
+| Data lineage | `rev4_lineage_all.py`, `rev6_lineage_ids.py` | `rev4_lineage_all.csv`, `lineage_observation_ids.csv`, `lineage_summary.csv` | Secs. 4.6–4.7 |
 | Neighbour rules, failed runs, surrogate | `rev4_doc_checks.py` | `rev4_documentation.md`, `rev4_failures_summary.csv` | Sec. 4.1 |
 | Wilcoxon/Holm, bootstrap CIs, Hodges–Lehmann | `rev5_stats.py` | `rev5_holm.csv`, `rev5_bootstrap.csv`, `rev5_means.csv` | Tables 6–7, 9–13 |
 | Holm family of the ten main rivals, Friedman ranks | computed from `rev5_stats.assemble()` | `rev6_r2_holm_core10.csv`, `rev6_r2_numbers.txt` | Sec. 4.4, Tables 5–6 |

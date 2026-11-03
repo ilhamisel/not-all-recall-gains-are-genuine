@@ -26,11 +26,12 @@ an experiment (internet required on first run; `imbalanced-learn` caches them).
 
 `satimage, sick_euthyroid, spectrometer, car_eval_34, libras_move,
 thyroid_sick, solar_flare_m0, yeast_ml8, coil_2000, arrhythmia` — all from the
-same `imbalanced-learn` collection, disjoint from the primary suite.
+same `imbalanced-learn` collection. `car_eval_34` is not independent of the primary suite (see
+*Data lineage* below); the other nine share no rows with it.
 
 ## External validation II — extreme imbalance (9 real + 9 synthetic)
 
-* **Real (IR 111–400):** unused public benchmarks
+* **Real (IR 111–400):** public benchmarks
   (`webpage, letter_img, pen_digits, optical_digits, scene, isolet,
   wine_quality, abalone`) sub-sampled at their minority class to a target
   imbalance ratio, plus the natively extreme `protein_homo` (IR 111). The exact
@@ -42,3 +43,11 @@ same `imbalanced-learn` collection, disjoint from the primary suite.
 
 All construction code is deterministic (seed 42) and fully contained in
 `ccsg/datasets.py`, so every suite can be regenerated exactly.
+
+**Data lineage.** The external suites are not fully independent of the primary suite (see `revision/results/lineage_observation_ids.csv` for the matched row indices):
+
+* `car_eval_34` has the same 1,728 feature rows as `car_eval_4` with a different label definition; its 134 minority rows include all 65 minority rows of `car_eval_4`.
+* `wine_quality` (real extreme suite) is a sub-sample whose 4,746 rows all occur in `Wine_White`, with a different minority definition (quality ≤ 4).
+* `abalone` (real extreme suite) is a sub-sample whose 3,804 rows all occur in `abalone_19`, with a different label.
+* Two `wine_quality` rows also match the feature values of three `Wine_Red` rows; the same feature vectors occur in `Wine_White`, so these matches are most likely coincidental and cannot be confirmed as the same observations (the source data carry no observation IDs).
+* All other external tasks share no rows with the primary suite.

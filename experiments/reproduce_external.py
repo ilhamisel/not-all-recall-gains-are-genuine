@@ -42,7 +42,7 @@ METHODS = {
     "CalKDE":      calkde,
     "GeoB":        geob,
     "CC-SG":       lambda X, y, seed=42: CCSG(strict=True, random_state=seed).fit_resample(X, y),
-    "CC-SG-original": lambda X, y, seed=42: CCSG(strict=False, random_state=seed).fit_resample(X, y),
+    "CC-SG-nonstrict": lambda X, y, seed=42: CCSG(strict=False, random_state=seed).fit_resample(X, y),
 }
 
 

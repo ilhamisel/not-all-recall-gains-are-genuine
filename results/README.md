@@ -1,7 +1,7 @@
 # Results
 
-> These tables belong to the **first submission** and use the original
-> implementation (`strict=False`). The SMOTE-IPF rows in them come from an
+> These tables belong to the **first submission** and use the non-strict
+> implementation, CC-SG (non-strict) (`strict=False`). The SMOTE-IPF rows in them come from an
 > earlier implementation that removed almost nothing and was therefore close to
 > SMOTE. The revised paper uses the strict implementation and the corrected
 > SMOTE-IPF; those results are in [`../revision/results/`](../revision/README.md).

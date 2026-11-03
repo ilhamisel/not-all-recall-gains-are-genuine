@@ -101,11 +101,14 @@ Guidelines:
   categorical columns; use a categorical-aware kernel or SMOTE-NC for those.
 * **Very few minority samples.** CC-SG is designed for the extreme regime
   (as few as five minority samples); no special handling is required.
-* **Strict vs. original.** `strict=True` (default) re-tests fallback candidates
-  and replaces failures by core samples; `strict=False` reproduces the original
-  implementation of the first submission. Both differ by at most 0.004 in the
+* **Strict vs. non-strict.** `strict=True` (default, CC-SG in the paper)
+  re-tests fallback candidates and replaces failures by core samples;
+  `strict=False` reproduces CC-SG (non-strict), the implementation of the first
+  submission. Both differ by at most 0.004 in the
   averaged primary-suite metrics. The admission guarantee covers the boundary
-  samples only, not the core samples.
+  samples only, not the core samples, and because failed fallback candidates
+  are replaced by core samples, the final core-to-boundary ratio can exceed the
+  initial 50/50 split.
 * **Tuning.** The defaults (`beta=0.5, tau=0.5, shrink=0.85`) were fixed once on
   the primary suite and transferred to all external suites unchanged; you should
   rarely need to touch them. `tau` trades recall for precision.
@@ -115,7 +118,7 @@ Guidelines:
 ```bash
 python data/download.py                        # fetch the two UCI wine datasets
 python experiments/reproduce_primary.py        # Tables 2-6, Fig. 4-6
-python experiments/reproduce_external.py       # Tables 7-10 (three unseen suites)
+python experiments/reproduce_external.py       # external suites (moderate, real extreme, synthetic)
 python experiments/label_noise_diagnostic.py   # proxy diagnostic, Fig. 8
 ```
 
